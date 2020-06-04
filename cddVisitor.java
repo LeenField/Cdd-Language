@@ -126,7 +126,7 @@ public interface cddVisitor<T> extends ParseTreeVisitor<T> {
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitInt(cddParser.IntContext ctx);
+//	T visitInt(cddParser.IntContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link cddParser#exprList}.
 	 * @param ctx the parse tree

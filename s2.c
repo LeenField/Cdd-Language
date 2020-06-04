@@ -1,5 +1,5 @@
 
-int min(int* i, int j) 
+int min(int i, char* j) 
 {
   int x;
   if (i < j) return i; else return j;
@@ -16,5 +16,5 @@ void main(void)
   j=6;
   i=j+4;
   i=4+6;
-  j=min(i, j);
+  j=min(j, "test");
 }

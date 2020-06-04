@@ -60,10 +60,22 @@ public class RefPhase extends cddBaseListener {
             currentExperListFieldValues.add( var.getType() );
         }
     }
+    // for constant in call
+    @Override
+    public void exitConst(cddParser.ConstContext ctx) {
+        // this getType is ParseBulit, diff from above one
+        int constType = ctx.constant().start.getType();
+        Symbol.Type type = CheckSymbols.getType(constType);
+        if(ctx.getParent() instanceof cddParser.ExprListContext)
+        {
+            currentExperListFieldValues.add( type.name() );
+        }
+    }
+
     // ExprList not support nesting:  f(f())
     @Override
     public void enterExprList(cddParser.ExprListContext ctx) {
-       currentExperListFieldValues = new ArrayList<String>();
+        currentExperListFieldValues = new ArrayList<String>();
     }
 
     @Override

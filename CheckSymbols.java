@@ -18,12 +18,18 @@ import java.io.InputStream;
 public class CheckSymbols {
     public static Symbol.Type getType(int tokenType) {
         switch ( tokenType ) {
+            // type ID
             case cddParser.K_VOID :  return Symbol.Type.tVOID;
             case cddParser.K_INT :   return Symbol.Type.tINT;
             case cddParser.K_FLOAT : return Symbol.Type.tFLOAT;
             case cddParser.K_CHAR :  return Symbol.Type.tCHAR;
             case cddParser.K_STRING:  return Symbol.Type.tSTRAING;
             case cddParser.K_ARRAY:  return Symbol.Type.tARRAY;
+            // Constant
+            case cddParser.INT:  return Symbol.Type.tINT;
+            case cddParser.FLOAT:  return Symbol.Type.tFLOAT;
+            case cddParser.CHAR_CONST:  return Symbol.Type.tCHAR;
+            case cddParser.STRING:  return Symbol.Type.tSTRAING;
         }
         return Symbol.Type.tINVALID;
     }

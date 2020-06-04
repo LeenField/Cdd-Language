@@ -61,15 +61,18 @@ expr:   ID '(' exprList? ')'           # Call   // 函数调用表达式
     |   expr ('<'|'>'|'<='|'<=') expr  # Relation
     |   expr '==' expr                 # Equal  // 优先级最低的运算 等于
     |   ID                             # Var    // 变量引用
-    |   INT                            # Int
-    |   FLOAT                          # Float
-    |   CHAR_CONST                     # Char
-    |   STRING                         # String
+    |   constant                       # Const
     |   '(' expr ')'                   # Parens
     ;
 
 exprList : expr (',' expr)* ;   // arg list
 
+constant
+    :   INT                           // # Int
+    |   FLOAT                         // # Float
+    |   CHAR_CONST                    // # Char
+    |   STRING                        // # String
+    ;
 //=================== Lexer Tokens ==============
 K_FLOAT : 'float';
 K_INT   : 'int';

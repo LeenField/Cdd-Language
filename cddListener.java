@@ -99,90 +99,6 @@ public interface cddListener extends ParseTreeListener {
 	 */
 	void exitCall(cddParser.CallContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code AddSub}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterAddSub(cddParser.AddSubContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code AddSub}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitAddSub(cddParser.AddSubContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code Var}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterVar(cddParser.VarContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Var}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitVar(cddParser.VarContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code Parens}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterParens(cddParser.ParensContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Parens}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitParens(cddParser.ParensContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code Index}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterIndex(cddParser.IndexContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Index}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitIndex(cddParser.IndexContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code String}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterString(cddParser.StringContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code String}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitString(cddParser.StringContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code Int}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterInt(cddParser.IntContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Int}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitInt(cddParser.IntContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code Float}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterFloat(cddParser.FloatContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code Float}
-	 * labeled alternative in {@link cddParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitFloat(cddParser.FloatContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code Not}
 	 * labeled alternative in {@link cddParser#expr}.
 	 * @param ctx the parse tree
@@ -219,6 +135,18 @@ public interface cddListener extends ParseTreeListener {
 	 */
 	void exitMult(cddParser.MultContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code AddSub}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterAddSub(cddParser.AddSubContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code AddSub}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitAddSub(cddParser.AddSubContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code Equal}
 	 * labeled alternative in {@link cddParser#expr}.
 	 * @param ctx the parse tree
@@ -231,17 +159,53 @@ public interface cddListener extends ParseTreeListener {
 	 */
 	void exitEqual(cddParser.EqualContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code Char}
+	 * Enter a parse tree produced by the {@code Var}
 	 * labeled alternative in {@link cddParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterChar(cddParser.CharContext ctx);
+	void enterVar(cddParser.VarContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code Char}
+	 * Exit a parse tree produced by the {@code Var}
 	 * labeled alternative in {@link cddParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitChar(cddParser.CharContext ctx);
+	void exitVar(cddParser.VarContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code Parens}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterParens(cddParser.ParensContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Parens}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitParens(cddParser.ParensContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code Const}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterConst(cddParser.ConstContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Const}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitConst(cddParser.ConstContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code Index}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterIndex(cddParser.IndexContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code Index}
+	 * labeled alternative in {@link cddParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitIndex(cddParser.IndexContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code Negate}
 	 * labeled alternative in {@link cddParser#expr}.
@@ -264,4 +228,14 @@ public interface cddListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitExprList(cddParser.ExprListContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link cddParser#constant}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstant(cddParser.ConstantContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link cddParser#constant}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstant(cddParser.ConstantContext ctx);
 }
